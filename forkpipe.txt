@@ -1,0 +1,33 @@
+{cslinux1:~/Assigment3} ls
+forkpipe.cpp  LineInfo.h  quotes.txt
+{cslinux1:~/Assigment3} g++ -std=c++11 forkpipe.cpp -o forkpipe
+{cslinux1:~/Assigment3} ls
+forkpipe  forkpipe.cpp  LineInfo.h  quotes.txt
+{cslinux1:~/Assigment3} ./forkpipe
+
+EXCEPTION: 
+Oh my Goodness... 
+Usage: ./forkpipe <number> in forkpipe.cpp",line:122
+
+
+Press the enter key once or twice to leave...
+  
+
+{cslinux1:~/Assigment3} ./forkpipe 2
+In Parent: Write to pipe getQuoteMessage sent Message: Get Quote
+In Child : Read from pipe pipeParentWriteChildMessage read Message: Get Quote
+In Child : Write to pipe pipeParentReadChildMessage sent Message:“All that is gold does not glitter, Not all those who wander are lost.” ~J.R.R. Tolkien
+In Parent: Read from pipe pipeParentReadChildMessage read Message:“All that is gold does not glitter, Not all those who wander are lost.” ~J.R.R. Tolkien
+
+-----------------------------------
+In Parent: Write to pipe getQuoteMessage sent Message: Get Quote
+In Child : Read from pipe pipeParentWriteChildMessage read Message: Get Quote
+In Child : Write to pipe pipeParentReadChildMessage sent Message:“We must be willing to let go of the life we planned in order to have the life that is waiting for us.” ~Joseph Campbell
+In Parent: Read from pipe pipeParentReadChildMessage read Message:“We must be willing to let go of the life we planned in order to have the life that is waiting for us.” ~Joseph Campbell
+
+-----------------------------------
+In Parent: Write to pipe ParentWriteChildExitMessage sent Message: Exit
+Parent Done
+In Child : Read from pipe pipeParentWriteChildMessage read Message: Exit
+Child Done
+{cslinux1:~/Assigment3} 
